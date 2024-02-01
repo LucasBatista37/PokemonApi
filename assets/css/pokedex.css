@@ -15,6 +15,67 @@
     flex-direction: column;
 }
 
+header {
+    background-color: white;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: white;
+}
+
+.navbar img {
+    width: 100px;
+    height: auto; 
+    margin-right: 10px;
+    margin-right: 70px;
+    margin-right: auto;
+}
+
+.navbar i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+.navbar-text {
+    margin-right: 15px;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar-toggler {
+    cursor: pointer;
+}
+
 .normal {
     background-color: #a6a877;
 }
@@ -149,10 +210,35 @@
     cursor: pointer;
 }
 
+h1 {
+    font-size: 2rem;
+    color: #333; 
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.search-form {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd; 
+    border-radius: 0.25rem;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
 
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+    input[type="text"] {
+        width: 60%; 
     }
 }
 
@@ -160,10 +246,55 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    input[type="text"] {
+        width: 60%; 
+}
 }
 
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    input[type="text"] {
+        width: 60%; 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #444;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar i {
+        color: black;
+    }
+
+    .navbar img {
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 577px) {
+    .navbar ul {
+        display: flex !important; 
+    }
+
+    .navbar i {
+        display: none;
     }
 }
