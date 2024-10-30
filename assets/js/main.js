@@ -10,7 +10,7 @@ function covertPokemonTypesToLi(pokemonTypes) {
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type} pokemon-item">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -39,5 +39,14 @@ function loadPokemonItens(offset, limit) {
         } else {
             pokemonList.innerHTML += newHtml;
         }
+
+        addAboutButtonEvents();
+    });
+}
+
+function addAboutButtonEvents() {
+    const aboutButtons = document.querySelectorAll('.pokemon-item button');
+    aboutButtons.forEach((button, index) => {
+        button.addEventListener('click', () => showPokemonDetails(originalPokemons[index]));
     });
 }

@@ -27,7 +27,7 @@
         <nav class="navbar">
             <div class="navbar-toggler">
                 <i class="fas fa-bars" onclick="toggleMenu()"></i>
-            </div>            
+            </div>
             <img src="imgs/pokeapi_img.png" alt="Logo Pokémon">
             <ul>
                 <li><a href="#">Pokémon</a></li>
@@ -43,8 +43,16 @@
     </form>
 
     <main class="content">
-        <ol id='pokemonList'class="pokemons"></ol>
+        <ol id='pokemonList' class="pokemons"></ol>
     </main>
+
+    <div id="pokemonModal" class="modal">
+        <div class="modal-content">
+            <span id="modalNumber" class="modal-number"></span>
+            <h2 id="modalName" class="modal-name"></h2>
+            <ol id="modalTypes" class="modal-types"></ol>
+        </div>
+    </div>
 
     <!-- Normalize JS -->
     <script src="assets/js/pokemon-model.js"></script>
